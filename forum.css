@@ -1,0 +1,30 @@
+/* Forum Styles */
+.forum-heading {
+    text-align: center;
+}
+
+.forum-new-post-button {
+    margin: 20px auto;
+    display: block;
+    background-color: #00a0ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forum-new-post-form {
+    display: none;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.forum-new-post-form input[type="text"],
+.forum-new-post-form textarea,
+.forum-new-post-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}

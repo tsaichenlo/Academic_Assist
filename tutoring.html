@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Tutoring - Academic Assist</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for positioning the user icon */
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-icon {
+            margin-right: 20px; /* Adjust margin to position the icon */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">Academic Assist</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="resources.html" class="navbar__links">Learning Resources</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="forum.html" class="navbar__links">Q&A Forum</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="tutoring.html" class="navbar__links">Schedule Tutoring</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-icon">
+            <a id="userIconLink" href="#">
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </nav>
+    <section class="content">
+        <h2>Schedule Tutoring</h2>
+        <form id="tutoringRequestForm" class="tutoring__form">
+            <label for="title">Title:</label>
+            <input type="text" id="tutoringRequestTitle" required>
+            <label for="details">Details:</label>
+            <textarea id="tutoringRequestDetails" required></textarea>
+            <label for="subject">Subject:</label>
+            <select id="subject">
+                <!-- Add options for subjects here -->
+                <option value="Data Structures">Data Structures</option>
+                <option value="ProgrammingC">Programming in C</option>
+                <option value="WebDesign">Web Design</option>
+                <!-- Add more subjects as needed -->
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+            <label for="time">Time:</label>
+            <select id="time">
+                <!-- Add options for times here -->
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+                <option value="18:00">06:00 PM</option>
+                <option value="19:00">07:00 PM</option>
+                <option value="20:00">08:00 PM</option>
+                <option value="21:00">09:00 PM</option>
+                <option value="22:00">10:00 PM</option>
+            </select>
+            <button type="submit">Request Tutoring Session</button>
+        </form>
+        <div id="tutoringRequestList"></div> <!-- Add this div for displaying tutoring requests -->
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Academic Assist. All rights reserved.</p>
+    </footer>
+    <script src="tutoring.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

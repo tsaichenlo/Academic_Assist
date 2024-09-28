@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Forum - Academic Assist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forum.css">
+    <style>
+        /* Additional CSS for positioning the user icon */
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-icon {
+            margin-right: 20px; /* Adjust margin to position the icon */
+        }
+        /* Additional CSS for forum page */
+        .forum-questions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .forum-questions ul {
+            list-style: none; /* Remove bullet points */
+        }
+
+        .forum-question-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px; /* Add some space below the title */
+        }
+
+        .forum-question-subject {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .forum-question-text {
+            font-size: 1em;
+            margin-bottom: 0; /* Remove default margin for paragraphs */
+        }
+        .forum-question-card {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 1100px; /* Adjust the width as needed */
+            margin-bottom: 20px; /* Add space between each card */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+
+        /* Additional CSS for filtering dropdowns */
+        .filter-dropdowns {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filter-dropdowns select {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">Academic Assist</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="resources.html" class="navbar__links">Learning Resources</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="forum.html" class="navbar__links">Q&A Forum</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="tutoring.html" class="navbar__links">Schedule Tutoring</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-icon">
+            <a id="userIconLink" href="#">
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </nav>
+
+    <section class="content">
+        <h2 class="forum-heading">Q&A Forum</h2>
+
+        <!-- New Post Button -->
+        <button class="forum-new-post-button" id="newPostButton">New Post</button>
+
+        <!-- New Post Form (Initially hidden) -->
+        <div class="forum-new-post-form" id="newPostForm">
+            <form id="questionForm">
+                <input type="text" id="postTitle" placeholder="Title" required>
+                <textarea id="postQuestion" placeholder="Type your question here..." required></textarea>
+                <label for="postSubject">Subject:</label>
+                <select id="postSubject" required>
+                    <option value="" disabled selected>Select Subject</option>
+                    <option value="Data Structures">Data Structures</option>
+                    <option value="Programming in C">Programming in C</option>
+                    <option value="Web Design">Web Design</option>
+                </select>
+                <button type="submit">Submit Post</button>
+            </form>
+        </div>
+
+        <!-- Filter Dropdowns -->
+        <div class="filter-dropdowns">
+            <select id="subjectFilter">
+                <option value="">All Subjects</option>
+                <option value="Data Structures">Data Structures</option>
+                <option value="Programming in C">Programming in C</option>
+                <option value="Web Design">Web Design</option>
+            </select>
+            <select id="answeredFilter">
+                <option value="">All Questions</option>
+                <option value="answered">Answered</option>
+                <option value="unanswered">Unanswered</option>
+            </select>
+        </div>
+
+        <!-- Recent Questions with Answers -->
+        <div class="forum-questions">
+            <ul id="questionList"></ul>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Academic Assist. All rights reserved.</p>
+    </footer>
+
+    <script src="forum.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

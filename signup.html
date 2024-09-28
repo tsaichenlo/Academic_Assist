@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Assist Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for positioning the user icon */
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-icon {
+            margin-right: 20px; /* Adjust margin to position the icon */
+        }
+
+        h1, p {
+            text-align: left;
+            padding-left: 40px; /* Adjust padding as needed */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        button {
+            margin: 10px 60px; /* Add some margin to the left side */
+            padding: 5px 10px;
+            display: block;
+            width: calc(50% - 40px); /* Adjust width and padding as needed */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">Academic Assist</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="resources.html" class="navbar__links">Learning Resources</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="forum.html" class="navbar__links">Q&A Forum</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="tutoring.html" class="navbar__links">Schedule Tutoring</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-icon">
+            <a id="userIconLink" href="#">
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </nav>
+    <h1>Sign Up</h1>
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <p><label for="userType">Select User Type:</label></p>
+        <select id="userType" required>
+            <option value="" disabled selected>Select User Type</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+        </select>
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Sign In</a></p>
+
+    <script src="signup.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

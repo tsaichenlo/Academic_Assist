@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Academic Assist</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for positioning the user icon */
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-icon {
+            margin-right: 20px; /* Adjust margin to position the icon */
+        }
+
+        /* CSS to center the text */
+        h1, h2, h3 {
+            text-align: left;
+            padding-left: 50px; /* Adjust padding as needed */
+        }
+        .dashboardSection {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 1100px; /* Adjust the width as needed */
+        }
+
+        /* Styling for cards inside dashboard sections */
+        .forum-question-card,
+        .resource-card,
+        .tutoring-appointment-card {
+            background-color: #fff; /* White background for cards */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add space between each card */
+        }
+
+        .forum-question-title,
+        .resource-title,
+        .tutoring-appointment-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px; 
+        }
+
+        .forum-question-card p,
+        .resource-details,
+        .tutoring-appointment-details,
+        .tutoring-appointment-subject,
+        .tutoring-appointment-date,
+        .tutoring-appointment-time {
+            font-size: 1em;
+            margin-bottom: 8px; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">Academic Assist</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="resources.html" class="navbar__links">Learning Resources</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="forum.html" class="navbar__links">Q&A Forum</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="tutoring.html" class="navbar__links">Schedule Tutoring</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-icon">
+            <a id="userIconLink" href="#">
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </nav>
+    <section class="content">
+    <h1>Dashboard</h1>
+    <h2>Welcome, <span id="userName"></span>!</h2>
+   
+    <!-- Display different sections based on user type -->
+    <div id="dashboardSections">
+        <!-- Student Dashboard Sections -->
+        <div id="studentDashboard" class="dashboardSection">
+            <h3>My Saved Resources</h3>
+            <ul id="savedResources"></ul>
+            <h3>My Asked Questions</h3>
+            <ul id="askedQuestions"></ul>
+            <h3>My Tutoring Appointments</h3>
+            <ul id="tutoringAppointments"></ul>
+            <div id="tutoringAppointmentsList"></div>
+        </div>
+    </div>
+
+    <h3><button id="logoutButton">Logout</button></h3>
+</section>
+    <!-- JavaScript files -->
+    <script src="dashboard.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Add more dashboard content here -->
+    <footer class="footer">
+        <p>&copy; 2024 Academic Assist. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

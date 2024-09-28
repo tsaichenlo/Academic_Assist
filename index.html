@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Assist Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for positioning the user icon */
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-icon {
+            margin-right: 20px; /* Adjust margin to position the icon */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">Academic Assist</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="resources.html" class="navbar__links">Learning Resources</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="forum.html" class="navbar__links">Q&A Forum</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="tutoring.html" class="navbar__links">Schedule Tutoring</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-icon">
+          <a id="userIconLink" href="#">
+              <img src="images/user.png" alt="User Icon">
+          </a>
+      </div>
+    </nav>
+    <div class="hero">
+        <div class="hero__container">
+            <img src="images/pic1.svg" alt="Educational Hero Image" class="hero__img" />
+            <h1>Welcome to Academic Assist</h1>
+            <p>Explore our resources and services to boost your learning.</p>
+        </div>
+    </div>
+    <section class="dashboard">
+        <h2>Your Dashboard</h2>
+        <div class="dashboard__appointments">
+            <h3>Upcoming Tutoring Appointments</h3>
+            <ul>
+                <li>No upcoming tutoring appointments</li>
+            </ul>
+        </div>
+        <div class="dashboard__questions">
+            <h3>Recent Unanswered Questions</h3>
+            <ul>
+                <li>Shell Sort Question</li>
+                <li>Are local static variables automatically shared?</li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Academic Assist. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

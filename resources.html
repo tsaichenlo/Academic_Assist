@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Resources - Academic Assist</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for positioning the user icon */
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-icon {
+            margin-right: 20px; /* Adjust margin to position the icon */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">Academic Assist</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="resources.html" class="navbar__links">Learning Resources</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="forum.html" class="navbar__links">Q&A Forum</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="tutoring.html" class="navbar__links">Schedule Tutoring</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-icon">
+            <a id="userIconLink" href="#">
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </nav>
+    <section class="content">
+        <h2>Learning Resources</h2>
+        <div class="tab">
+            <button class="tablinks" onclick="openCategory(event, 'DataStructures')">Data Structures</button>
+            <button class="tablinks" onclick="openCategory(event, 'ProgrammingC')">Programming in C</button>
+            <button class="tablinks" onclick="openCategory(event, 'WebDesign')">Web Design</button>
+            <button class="tablinks" onclick="openCategory(event, 'CSAlgorithms')">Fundamentals of Algorithms</button>
+            <button class="tablinks" onclick="openCategory(event, 'Reasoning')">Reasoning Under Uncertainty</button>
+
+        </div>
+
+        <div id="DataStructures" class="tabcontent">
+            <h3>Data Structures</h3>
+            <p>Here are the top 5 resources for learning Data Structures:</p>
+            <ul id="savedResources">
+                <li><a href="https://www.geeksforgeeks.org/introduction-to-data-structures/">Link 1: Introduction to Data Structures</a> <span class="add-button" data-resource="Introduction to Data Structures">+</span></li>
+                <li><a href="https://medium.com/@maheshhkanagavell/data-structures-trees-and-graphs-2a0073614390">Link 2: Trees and Graphs</a> <span class="add-button" data-resource="Trees and Graphs">+</span></li>
+                <li><a href="https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/">Link 3: Algorithms on Data Structures</a> <span class="add-button" data-resource="Algorithms on Data Structures">+</span></li>
+                <li><a href="https://www.javatpoint.com/data-structures-in-java">Link 4: Data Structures in Java</a> <span class="add-button" data-resource="Data Structures in Java">+</span></li>
+                <li><a href="https://www.javatpoint.com/advance-data-structures">Link 5: Advanced Data Structures</a> <span class="add-button" data-resource="Advanced Data Structures">+</span></li>
+            </ul>
+        </div>
+
+        <div id="ProgrammingC" class="tabcontent">
+            <h3>Programming in C</h3>
+            <p>Here are the top 5 resources for mastering Programming in C:</p>
+            <ul id="savedResources">
+                <li><a href="https://www.freecodecamp.org/news/the-c-programming-handbook-for-beginners/">Link 1: C Programming Basics</a> <span class="add-button" data-resource="C Programming Basics">+</span></li>
+                <li><a href="https://www.programiz.com/c-programming/c-pointers">Link 2: Pointers in C</a> <span class="add-button" data-resource="Pointers in C">+</span></li>
+                <li><a href="https://www.youtube.com/watch?v=MQIF-WMUOL8">Link 3: C File Handling</a> <span class="add-button" data-resource="C File Handling">+</span></li>
+                <li><a href="https://www.cs.fsu.edu/~myers/c++/notes/dma.html">Link 4: Dynamic Memory Allocation</a> <span class="add-button" data-resource="Dynamic Memory Allocation">+</span></li>
+                <li><a href="https://pwskills.com/blog/c-programming-examples/">Link 5: Common C Problems and Solutions</a> <span class="add-button" data-resource="Common C Problems and Solutions">+</span></li>
+            </ul>
+        </div>
+
+        <div id="WebDesign" class="tabcontent">
+            <h3>Web Design</h3>
+            <p>Here are the top 5 resources for learning Web Design:</p>
+            <ul id="savedResources">
+                <li><a href="https://www.thinkful.com/blog/learn-the-basics-of-html-and-html5/">Link 1: HTML5 Basics</a> <span class="add-button" data-resource="HTML5 Basics">+</span></li>
+                <li><a href="https://www.w3schools.com/css/">Link 2: CSS3 for Beginners</a> <span class="add-button" data-resource="CSS3 for Beginners">+</span></li>
+                <li><a href="https://web.dev/articles/critical-rendering-path/adding-interactivity-with-javascript">Link 3: JavaScript for Interactivity</a> <span class="add-button" data-resource="JavaScript for Interactivity">+</span></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Link 4: Responsive Design Techniques</a> <span class="add-button" data-resource="Responsive Design Techniques">+</span></li>
+                <li><a href="https://muhammedcuma.medium.com/mastering-advanced-web-development-techniques-tools-and-best-practices-36376a949914">Link 5: Advanced Web Design Concepts</a> <span class="add-button" data-resource="Advanced Web Design Concepts">+</span></li>
+            </ul>
+        </div>
+        <div id="CSAlgorithms" class="tabcontent">
+            <h3>Algorithms</h3>
+            <p>Here are the top 5 resources for learning the Fundamentals of Algorithms:</p>
+            <ul id="savedResources">
+                <li><a href="https://www.thinkful.com/blog/learn-the-basics-of-html-and-html5/">Link 1: Binary Search Algorithm</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://www.w3schools.com/css/">Link 2: Hashing</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://web.dev/articles/critical-rendering-path/adding-interactivity-with-javascript">Link 3: Minimum Spanning Trees</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Link 4: Topological Sort</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://muhammedcuma.medium.com/mastering-advanced-web-development-techniques-tools-and-best-practices-36376a949914">Link 5: Dynamic Programming</a> <span class="add-button" data-resource="">+</span></li>
+            </ul>
+        </div>
+        <div id="Reasoning" class="tabcontent">
+            <h3>Reasoning Under Uncertainty</h3>
+            <p>Here are the top 5 resources for learning Reasoning Under Uncertainty:</p>
+            <ul id="savedResources">
+                <li><a href="https://www.thinkful.com/blog/learn-the-basics-of-html-and-html5/">Link 1: Binomial Law</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://www.w3schools.com/css/">Link 2: Discrete Random Variables</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://web.dev/articles/critical-rendering-path/adding-interactivity-with-javascript">Link 3: Joint PDF, CDF Markov and Chebyshev Inequalities</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Link 4: Covariance and Correlation</a> <span class="add-button" data-resource="">+</span></li>
+                <li><a href="https://muhammedcuma.medium.com/mastering-advanced-web-development-techniques-tools-and-best-practices-36376a949914">Link 5: Markov Chains</a> <span class="add-button" data-resource="">+</span></li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Academic Assist. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="resources.js"></script>
+</body>
+</html>
