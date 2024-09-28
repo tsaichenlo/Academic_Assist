@@ -36,4 +36,4 @@ Tech Stack
 - Backend: Node.js
 - Database: SQL
 - Version Control: Git, GitHub
-- Deployment: Docker
+- Deployment: AWS
