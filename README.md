@@ -1,5 +1,4 @@
 # AcademicAssist
-
 Project created in collaboration with 3 other CS students.  -->  [Academic Assist.pdf](https://github.com/user-attachments/files/17154013/Academic.Assist.pdf)
 
 
