@@ -1,6 +1,6 @@
 /* Basic Reset */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: #f4f4f4;
@@ -8,20 +8,155 @@ body {
     line-height: 1.6;
 }
 
+/* Register & Login */
+body#register-page {
+    background: linear-gradient(to right, #f4f4f4, rgb(245, 198, 198)) !important;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 2rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #757575;
+    padding: 10px 0;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-group i {
+    color: #333;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 10px;
+}
+
+input {
+    color: #333;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding-left: 35px;
+    /* Space for the icon */
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #757575;
+}
+
+.btn {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #ff8177;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: #d44d5a;
+    /* Darker shade for hover */
+}
+
+.or {
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: #757575;
+    font-weight: normal;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 1rem 0;
+}
+
+.icons i {
+    color: #ff8177;
+    font-size: 1.5rem;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.icons i:hover {
+    background: #f0f0f0;
+}
+
+.links,
+.recover a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.links button,
+.recover a {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.links button:hover,
+.recover a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.links p {
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+
 /* Navigation Bar */
 .navbar {
     background-color: #ff8177;
     background-image: linear-gradient(to top, #ff8177 0%, #ff0844 100%);
-    color: white;
+    color: #f4f4f4;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar__container a {
-    color: white;
+    color: #f4f4f4;
     text-decoration: none;
     font-weight: bold;
 }
@@ -35,25 +170,42 @@ body {
     padding: 0 15px;
 }
 
-.navbar__item a:hover, .navbar__item a.active {
-    background: rgb(245, 174, 174);
-    border-radius: 4px;
-    transition: background 0.3s ease;
+.navbar__item a:hover,
+.navbar__item a.active {
+    background: rgba(255, 235, 235, 0.3);
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+.navbar__item--home a {
+    background: #fa6771;
+    color: #f4f4f4;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__item--home a:hover {
+    background: #d44d5a;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Scrolling Effects */
 .navbar.scrolled {
-    background-color: black;
+    background-color: #333;
     transition: background-color 0.3s;
 }
 
 /* Hero Section */
 .hero {
     background: #f77062;
-    color: white;
+    color: #f4f4f4;
     padding: 40px 20px;
     text-align: center;
-    background-image: linear-gradient(to right,black, black);
+    background-image: linear-gradient(to right, black, black);
 }
 
 .hero__container {
@@ -68,10 +220,10 @@ body {
 /* Main Content Area */
 .content {
     padding: 20px;
-    background: white;
+    background: #f4f4f4;
     margin: 20px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     max-width: 1200px;
 }
 
@@ -80,7 +232,7 @@ body {
     text-align: center;
     padding: 20px 0;
     background: #333;
-    color: white;
+    color: #f4f4f4;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -102,8 +254,11 @@ body {
 }
 
 /* Dashboard and Sections */
-.dashboard, .forum__questions, .forum__answers, .tutoring__form {
-    background: white;
+.dashboard,
+.forum__questions,
+.forum__answers,
+.tutoring__form {
+    background: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
@@ -111,17 +266,20 @@ body {
 }
 
 /* Form Styling */
-input[type="date"], select, textarea {
+input[type="date"],
+select,
+textarea {
     width: 100%;
     padding: 8px;
     margin-top: 8px;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #f4f4f4;
 }
 
-input[type="submit"], button {
-    background-color: #f77062;
-    color: white;
+input[type="submit"],
+button {
+    background-color: #fa6771;
+    color: #f4f4f4;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -129,12 +287,14 @@ input[type="submit"], button {
     margin-top: 10px;
 }
 
-input[type="submit"]:hover, button:hover {
-    background-color: #ff0844;
+input[type="submit"]:hover,
+button:hover {
+    background-color: #d44d5a;
 }
+
 .tablinks.active {
-    background-color: #ff0844; /* Darker blue for active tab */
-    color: white;
+    background-color: #ff0844;
+    color: #f4f4f4;
 }
 
 .user-icon {
